@@ -31,7 +31,9 @@ Float
 String
 	string
 */
-
+// Single Package should not create mutiple main function
+/*
 func main() {
 	integer()
 }
+*/

@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-var a, b, c = "A", "B", "C"
+var a, b, c string = "A", "B", "C"
 
 func main() {
 	//var name = "Kunal Singh" /*Type Inference*/
@@ -27,4 +27,9 @@ func main() {
 	var a, b = 1, "Kunal"
 	fmt.Println(a, b)
 
+	p, q, r := 1, 2, "9384"
+	fmt.Println(p, q, r)
+
+	var i, j int = 1, 2
+	fmt.Println(i, j)
 }

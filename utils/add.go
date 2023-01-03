@@ -1,6 +1,6 @@
 package utils
 
-// Adder : adds multiple numbers/*
+// Add adds multiple numbers
 func Add(nums ...int32) int32 {
 	total := int32(0)
 	for _, v := range nums {

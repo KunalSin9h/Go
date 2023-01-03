@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"gopro/utils"
+	"github.com/KunalSin9h/Go/utils"
 )
 
 func main() {

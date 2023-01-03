@@ -9,7 +9,7 @@ go test -test.v -> for t.Log also
 
 func Test1(t *testing.T) {
 	expected := int32(10)
-	actual := Adder(1, 2, 3, 4)
+	actual := Add(1, 2, 3, 4)
 
 	if expected != actual {
 		t.Error("Test 1 Failed")
@@ -20,7 +20,7 @@ func Test1(t *testing.T) {
 
 func Test2(t *testing.T) {
 	expected := int32(11)
-	actual := Adder(1, 2, 3, 4, 1)
+	actual := Add(1, 2, 3, 4, 1)
 
 	if expected != actual {
 		t.Error("Test 2 Failed")
@@ -31,7 +31,7 @@ func Test2(t *testing.T) {
 
 func Test3(t *testing.T) {
 	expected := int32(6)
-	actual := Adder(1, 2, 3, 4, -4)
+	actual := Add(1, 2, 3, 4, -4)
 
 	if expected != actual {
 		t.Error("Test 3 Failed")

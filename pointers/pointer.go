@@ -12,6 +12,16 @@ func changeName(name *string) {
 	*name = strings.ToTitle(*name)
 }
 
+type User struct {
+	ID          int
+	Name, Email string
+}
+
+func updateEmail(user *User, email string) {
+	fmt.Println(user.Name)
+	user.Email = email
+}
+
 func main() {
 	var name string
 	var namePointer *string
@@ -29,4 +39,15 @@ func main() {
 	n := "kunal"
 	changeName(&n)
 	fmt.Println(n)
+
+	u := User{
+		ID:    1,
+		Name:  "Kunal",
+		Email: "kunal@knl.sh",
+	}
+
+	updateEmail(&u, "x@knl.sh")
+
+	fmt.Println(u)
+
 }

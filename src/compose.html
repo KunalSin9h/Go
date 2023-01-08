@@ -62,29 +62,40 @@
     letter-spacing: 2px;
     text-transform: uppercase;
   }
+
+  .md {
+      font-size: 10px;
+  }
 </style>
 <head>
 <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-<title>{{.PageTitle}}</title>
+<title>Compose Article</title>
 </head>
 
 <script type='text/javascript'>
 </script>
 <body>
-    <h1>All Todos</h1>
-    <form action="/add-todo/" method="post">
+    <h1>Add Article</h1>
+
+    <form action="/add-article/" method="post">
       <input type="text" placeholder="Title" name="title">
-      <textarea placeholder="Details..." name="content"></textarea>
+      <input type="text" placeholder="Slug" name="slug">
+      <textarea placeholder="Description..." name="description"></textarea>
+      <input type="date" name="date">
+      <textarea class="md" placeholder="Markdown here..." rows="20" cols="50" name="md"></textarea>
       <input type="submit">
     </form>
+
     <div class="list">
-    {{if not .PageTodos }}
-      <h2>No Todos</h2>
+    {{if not .AllArticles }}
+      <h2>No Articles</h2>
     {{else}}
-      {{range .PageTodos}}
+      {{range .AllArticles}}
       <div>
         <p>{{.Title}}</p>
-        <p>{{.Content}}</p>
+        <p>{{.Slug}}</p>
+        <p>{{.Description}}</p>
+        <p>{{.Date}}</p>
       </div>
       {{end}}
     {{end}}
